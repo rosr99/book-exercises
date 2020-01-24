@@ -55,10 +55,12 @@ employee_with_highest_raise <- salaries[salaries$annual_salary_adjustments == hi
 print(employee_with_highest_raise)
 
 # What was the largest decrease in salaries between the two years?
-
+largest_decrease <- min(salaries$annual_salary_adjustments)
+print(largest_decrease)
 
 # What was the name of the employee who recieved largest decrease in salary?
-
+employee_with_largest_decrease <- salaries[salaries$annual_salary_adjustments == largest_decrease, "num_employees"]
+print(employee_with_largest_decrease)
 
 # What was the average salary change?
 
