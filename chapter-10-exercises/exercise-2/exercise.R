@@ -63,13 +63,15 @@ employee_with_largest_decrease <- salaries[salaries$annual_salary_adjustments ==
 print(employee_with_largest_decrease)
 
 # What was the average salary change?
-
+average_salary_change <- mean(salaries$annual_salary_adjustments)
+print(average_salary_change)
 
 # For people who did not get a raise, how much money did they lose on average?
-
+average_salary_lose_change <- mean(salaries$annual_salary_adjustments < 0)
+print(average_salary_lose_change)
 
 ## Consider: do the above averages match what you expected them to be based on 
 ## how you generated the salaries?
 
 # Write a .csv file of your salary data to your working directory
-
+write.csv(salaries, "salariesEx.csv")
