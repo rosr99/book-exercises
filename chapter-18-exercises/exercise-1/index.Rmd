@@ -1,0 +1,30 @@
+---
+title: _"Movie Review"_
+author: "Ryan Ros"
+date: "2/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+source("exercise.R")
+
+headline <- recent_review$Headline
+short_summary <- recent_review$Short_Summary
+
+
+```
+
+## `r headline`
+
+> `r short_summary`
+
+```{r link, echo = FALSE}
+
+link_markdown <- paste0("[", movie_name, "](", recent_review$Article_Link, ")")
+
+
+```
+
+Link to FULL Movie Review: `r link_markdown`
